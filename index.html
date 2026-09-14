@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Projeto Pro Bono | UNIPLAC</title>
 <meta name="description" content="Projeto de Extensão Pro Bono UNIPLAC — acesso à justiça, cidadania e orientação jurídica gratuita.">
+<link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="favicon.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -166,7 +169,7 @@ function renderLocations(){list.innerHTML='';actions.forEach((a,i)=>{const el=do
 function renderTable(filter='all'){const tbody=document.querySelector('#schedule tbody');tbody.innerHTML='';actions.filter(a=>filter==='all'||a.status===filter).forEach(a=>{const tr=document.createElement('tr');tr.innerHTML=`<td>${a.date}</td><td><strong>${a.city}</strong></td><td>${a.place}</td><td><span class="tag ${a.status}">${a.label}</span></td>`;tbody.appendChild(tr);});}
 function renderAll(){renderLocations();renderMap();renderTable(document.querySelector('.filter.active')?.dataset.filter||'all');}
 async function loadRemote(){
-action="https://script.google.com/macros/s/AKfycbzYIdswjgNXsgEoBN--nSZ4tT8W94jgbqgSh3D--Nj3oZtpiytUaCNwjzpl7JAvNH2mrA/exec
+ // Cole aqui a URL da implantação pública do Apps Script quando estiver publicada.
  const PUBLIC_DATA_URL='';
  if(!PUBLIC_DATA_URL) return;
  try{const r=await fetch(PUBLIC_DATA_URL,{cache:'no-store'});if(!r.ok)throw new Error('Falha ao consultar o cronograma');const j=await r.json();if(j.ok&&Array.isArray(j.actions)&&j.actions.length){actions=j.actions;renderAll();}}catch(e){console.warn('Cronograma online indisponível; usando dados locais.',e);}
