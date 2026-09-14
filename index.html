@@ -77,41 +77,17 @@
 
 <section id="mapa" class="section map-section">
  <div class="container">
-  <div class="section-head map-head"><div><span class="eyebrow">ONDE ESTAMOS</span><h2>Mapa das ações em Santa Catarina</h2><p>Mapa do estado com os pontos do projeto. Clique em um marcador ou em uma cidade na lista para destacar a ação.</p></div><div class="legend"><span><i class="dot done"></i> Realizado</span><span><i class="dot next"></i> Previsto</span></div></div>
+  <div class="section-head map-head"><div><span class="eyebrow">ONDE ESTAMOS</span><h2>Mapa das ações em Santa Catarina</h2><p>Mapa do estado com os pontos do projeto. Clique em um marcador ou em uma cidade na lista para destacar a ação.</p></div><div class="legend"><span class="legend-item"><i class="dot done"></i> Realizado</span><span class="legend-item"><i class="dot next"></i> Previsto</span></div></div>
   <div class="map-layout">
    <div class="map-frame" id="sc-map" aria-label="Mapa interativo de Santa Catarina">
     <div class="map-toolbar"><button type="button" id="zoom-out" aria-label="Diminuir mapa">−</button><button type="button" id="zoom-in" aria-label="Aumentar mapa">+</button><button type="button" id="zoom-reset">Centralizar</button></div>
     <div class="map-canvas" id="map-canvas">
-      <svg class="sc-illustrated-map" viewBox="0 0 800 600" role="img" aria-label="Mapa ilustrativo de Santa Catarina com pontos de atendimento do Projeto Pro Bono UNIPLAC">
-        <defs>
-          <linearGradient id="water" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9effa"/><stop offset="1" stop-color="#b9dfef"/></linearGradient>
-          <linearGradient id="land" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffdf5"/><stop offset="1" stop-color="#f1e6c9"/></linearGradient>
-          <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-opacity=".16"/></filter>
-          <clipPath id="scClip"><path d="M112 104 C166 83 239 78 311 92 C382 105 447 101 520 93 C588 85 646 96 684 125 L666 159 C650 188 660 220 645 248 C628 278 636 312 616 342 C594 374 580 414 550 444 C525 469 494 482 463 486 C431 490 401 510 369 504 C339 498 321 477 291 472 C258 467 225 452 203 429 C181 406 160 380 143 348 C128 321 109 294 102 264 C95 235 102 205 93 180 C86 153 88 126 112 104 Z"/></clipPath>
-        </defs>
-        <rect width="800" height="600" fill="url(#water)"/>
-        <g opacity=".28" stroke="#fff" stroke-width="3" fill="none">
-          <path d="M0 150 C150 105 280 195 420 135 S680 110 800 160"/>
-          <path d="M0 270 C160 220 300 330 455 255 S690 235 800 285"/>
-          <path d="M0 420 C130 370 280 480 430 405 S690 385 800 435"/>
-        </g>
-        <path d="M112 104 C166 83 239 78 311 92 C382 105 447 101 520 93 C588 85 646 96 684 125 L666 159 C650 188 660 220 645 248 C628 278 636 312 616 342 C594 374 580 414 550 444 C525 469 494 482 463 486 C431 490 401 510 369 504 C339 498 321 477 291 472 C258 467 225 452 203 429 C181 406 160 380 143 348 C128 321 109 294 102 264 C95 235 102 205 93 180 C86 153 88 126 112 104 Z" fill="url(#land)" stroke="#b8a36d" stroke-width="6" filter="url(#shadow)"/>
-        <g clip-path="url(#scClip)" opacity=".42" fill="none" stroke="#c6b889" stroke-width="2">
-          <path d="M120 160 L660 180"/><path d="M100 220 L650 245"/><path d="M105 285 L625 310"/><path d="M130 350 L595 370"/><path d="M165 410 L555 430"/>
-          <path d="M180 90 L190 470"/><path d="M260 85 L275 485"/><path d="M345 90 L350 500"/><path d="M430 92 L420 495"/><path d="M515 90 L500 470"/><path d="M590 98 L575 440"/>
-        </g>
-        <g clip-path="url(#scClip)" fill="none" stroke="#fff" stroke-width="6" opacity=".72">
-          <path d="M120 210 C220 170 300 245 390 205 S560 170 660 220"/>
-          <path d="M105 330 C205 285 300 365 405 320 S550 295 620 350"/>
-          <path d="M180 420 C260 365 345 455 430 400 S520 380 575 420"/>
-        </g>
-        <text x="400" y="155" text-anchor="middle" class="map-title-svg">SANTA CATARINA</text>
-        <text x="400" y="180" text-anchor="middle" class="map-subtitle-svg">AÇÕES PRO BONO UNIPLAC</text>
-        <g class="compass"><circle cx="730" cy="85" r="30" fill="#fff" opacity=".9"/><path d="M730 62 L738 92 L730 108 L722 92 Z" fill="#102c50"/><text x="730" y="52" text-anchor="middle">N</text></g>
-      </svg>
+      <img class="sc-base-map" src="mapa-santa-catarina.png" alt="Mapa de Santa Catarina com divisão municipal">
+      <div class="map-fallback">Mapa de Santa Catarina</div>
+      <div class="map-watermark" aria-hidden="true">PRO BONO UNIPLAC</div>
       <div id="map-markers"></div>
     </div>
-    <div class="map-credit">Mapa ilustrativo de Santa Catarina • pontos posicionados por município. Clique em um ponto para abrir a localização no Google Maps.</div>
+    <div class="map-credit">Mapa de Santa Catarina • pontos do Projeto Pro Bono UNIPLAC. Clique em um ponto para abrir a localização no Google Maps.</div>
    </div>
    <aside class="locations" id="location-list"></aside>
   </div>
@@ -146,7 +122,7 @@
 <section id="solicitar" class="section request-section">
  <div class="container request-grid">
   <div><span class="eyebrow">PRECISA DE ORIENTAÇÃO?</span><h2>Solicite um atendimento</h2><p>O formulário abaixo é uma demonstração da área pública. Na versão publicada, ele deverá ser conectado a um sistema seguro de recebimento e triagem.</p><div class="privacy"><strong>Privacidade:</strong> dados pessoais e informações sobre casos jurídicos não devem ficar expostos publicamente. O tratamento deve ocorrer em ambiente apropriado.</div></div>
-  <form id="request-form" class="form"><label>Nome completo<input required name="nome" placeholder="Digite seu nome"></label><label>Cidade<input required name="cidade" placeholder="Cidade"></label><label>Telefone ou e-mail<input required name="contato" placeholder="Como podemos entrar em contato?"></label><label>Motivo da procura<textarea required name="motivo" rows="5" placeholder="Descreva brevemente o motivo do atendimento"></textarea></label><button class="btn primary" type="submit">Enviar solicitação</button><small id="form-msg"></small></form>
+  <form id="request-form" class="form" method="POST" action="COLE_AQUI_A_URL_DO_APPS_SCRIPT" target="form-submit-frame"><label>Nome completo<input required name="nome" maxlength="120" placeholder="Digite seu nome"></label><label>Cidade<input required name="cidade" maxlength="100" placeholder="Cidade"></label><label>Telefone<input required name="telefone" maxlength="40" inputmode="tel" placeholder="(49) 99999-9999"></label><label>E-mail<input required type="email" name="email" maxlength="160" placeholder="seuemail@exemplo.com"></label><label>Motivo da procura<textarea required name="motivo" maxlength="2000" rows="5" placeholder="Descreva brevemente o motivo do atendimento"></textarea></label><input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0"><button class="btn primary" type="submit">Enviar solicitação</button><small id="form-msg" aria-live="polite"></small></form><iframe name="form-submit-frame" id="form-submit-frame" title="Envio da solicitação" hidden></iframe>
  </div>
 </section>
 </main>
@@ -199,7 +175,20 @@ renderAll();
 document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderTable(btn.dataset.filter);}));
 document.querySelector('.menu-btn').addEventListener('click',()=>document.querySelector('#menu').classList.toggle('open'));
 document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>document.querySelector('#menu').classList.remove('open')));
-document.getElementById('request-form').addEventListener('submit',e=>{e.preventDefault();document.getElementById('form-msg').textContent='Protótipo: formulário preenchido. Para uso real, conecte-o a um sistema seguro de atendimento.';});
+const requestForm=document.getElementById('request-form');
+const formMsg=document.getElementById('form-msg');
+const formFrame=document.getElementById('form-submit-frame');
+requestForm.addEventListener('submit',()=>{
+ formMsg.textContent='Enviando sua solicitação…';
+ requestForm.querySelector('button[type="submit"]').disabled=true;
+});
+formFrame.addEventListener('load',()=>{
+ if(requestForm.querySelector('button[type="submit"]').disabled){
+   formMsg.textContent='Solicitação enviada com sucesso. A equipe do Projeto Pro Bono poderá entrar em contato pelos dados informados.';
+   requestForm.reset();
+   requestForm.querySelector('button[type="submit"]').disabled=false;
+ }
+});
 loadRemote();
 </script>
 </body>

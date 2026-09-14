@@ -31,33 +31,11 @@
 .location-card.selected{border-color:var(--gold);box-shadow:0 0 0 2px rgba(196,147,43,.14)}
 @media(max-width:850px){.map-frame{height:470px}.map-credit{font-size:9px}.map-toolbar{top:10px;right:10px}.map-marker em{font-size:9px}.map-marker span{width:19px;height:19px}}
 
-/* Mapa com estética cartográfica mais leve e próxima de um mapa digital */
-.map-canvas{background:linear-gradient(180deg,#dfeef7 0%,#f6fbfd 100%);}
-.sc-base-map{opacity:.58;filter:saturate(1.15) contrast(.96);mix-blend-mode:multiply;}
-.map-watermark{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;font-size:clamp(28px,5vw,72px);font-weight:1000;letter-spacing:.16em;color:rgba(16,44,80,.07);line-height:1.1;pointer-events:none;z-index:1;transform:rotate(-14deg)}
-.map-watermark span{font-size:.25em;letter-spacing:.3em}
-.map-road{position:absolute;height:3px;border-radius:99px;background:rgba(255,255,255,.72);box-shadow:0 0 0 1px rgba(125,153,175,.12);transform-origin:left center;pointer-events:none;z-index:2;opacity:.75}
-.road-a{width:60%;left:15%;top:47%;transform:rotate(-20deg)}
-.road-b{width:48%;left:29%;top:62%;transform:rotate(12deg)}
-.road-c{width:42%;left:23%;top:34%;transform:rotate(38deg)}
-.map-marker{z-index:5}
-.map-marker span{transition:transform .16s ease}
-.map-marker:hover span{transform:scale(1.15)}
-.map-popup-floating{pointer-events:auto;z-index:20;transform:translate(-50%,-112%);min-width:210px}
-.map-open{display:inline-flex;margin-top:8px;padding:7px 9px;border-radius:7px;background:#102c50;color:#fff!important;text-decoration:none;font-size:11px;font-weight:900;justify-content:center}
-.map-open:hover{background:#173e69}
-.map-credit{background:rgba(255,255,255,.93)}
+/* Ajustes finais do mapa e da legenda */
+.map-canvas{background:#dff1fa;}
+.sc-base-map{opacity:1;filter:none;}
+.map-watermark{position:absolute;right:18px;top:18px;z-index:2;pointer-events:none;font-size:clamp(12px,1.8vw,20px);font-weight:900;letter-spacing:.14em;color:rgba(16,44,80,.12);background:rgba(255,255,255,.42);padding:6px 9px;border-radius:8px;}
+.legend-item{display:inline-flex;align-items:center;padding:7px 10px;border-radius:999px;background:#fff;border:1px solid var(--line);}
+@media(max-width:850px){.legend{display:flex;flex-wrap:wrap;gap:8px}.legend-item{font-size:12px;padding:6px 9px}.map-watermark{left:14px;top:14px;font-size:12px;padding:5px 7px}.map-credit{font-size:8.5px;line-height:1.25;padding:5px 7px}.map-frame{height:470px}.map-canvas{min-width:0}}
 
-
-/* Mapa ilustrativo Pro Bono — sem textos de marca d'água sobrepostos e sem dependência de mapa externo */
-.map-canvas{background:linear-gradient(145deg,#cfeaf5,#edf7fb 55%,#d9eef5);}
-.sc-illustrated-map{position:absolute;inset:0;width:100%;height:100%;display:block;}
-.sc-base-map,.map-watermark,.map-road,.map-fallback{display:none!important;}
-.map-title-svg{font:900 28px Inter,Arial,sans-serif;letter-spacing:5px;fill:rgba(16,44,80,.13);}
-.map-subtitle-svg{font:800 11px Inter,Arial,sans-serif;letter-spacing:3px;fill:rgba(16,44,80,.22);}
-.compass text{font:900 13px Inter,Arial,sans-serif;fill:#102c50;}
-.map-marker em{background:rgba(255,255,255,.97);border:1px solid rgba(16,44,80,.10);}
-.map-marker.done span{background:#2c7650;box-shadow:0 0 0 5px rgba(44,118,80,.16),0 3px 12px rgba(0,0,0,.25);}
-.map-marker.next span{background:#c4932b;box-shadow:0 0 0 5px rgba(196,147,43,.16),0 3px 12px rgba(0,0,0,.25);}
-.legend span{display:inline-flex;align-items:center;padding:7px 11px;border-radius:999px;background:#fff;border:1px solid var(--line);}
-@media(max-width:850px){.legend{display:flex;flex-wrap:wrap;gap:8px}.legend span{font-size:12px;padding:7px 10px}.legend .dot{width:11px;height:11px;flex:none}.map-frame{height:470px}.map-title-svg{font-size:22px;letter-spacing:3px}.map-subtitle-svg{font-size:9px;letter-spacing:2px}.map-marker em{font-size:9px;padding:2px 4px}.map-marker span{width:20px;height:20px;border-width:3px}.map-marker.selected span{width:28px;height:28px}}
+@media(max-width:850px){.map-head .legend{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 12px;width:max-content;max-width:100%;box-shadow:0 5px 16px rgba(16,44,80,.06)}.map-head .legend-item{display:inline-flex;align-items:center;color:var(--ink)}.map-head .dot{flex:0 0 10px}.map-watermark{font-size:12px;right:12px;top:12px}}
