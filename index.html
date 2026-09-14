@@ -48,7 +48,7 @@
   <div class="section-head"><span class="eyebrow">O PROJETO</span><h2>A universidade mais perto da comunidade</h2><p>O Pro Bono UNIPLAC é uma iniciativa interdisciplinar voltada à promoção do acesso à justiça e à efetivação dos direitos fundamentais da população em situação de vulnerabilidade social da região de abrangência da UNIPLAC.</p></div>
   <div class="cards three">
    <article class="card"><div class="card-icon">⚖</div><h3>Acesso à justiça</h3><p>Orientação e assistência jurídica gratuita, priorizando soluções consensuais e administrativas antes da judicialização, quando possível.</p></article>
-   <article class="card"><div class="card-icon">🤝</div><h3>Atuação interdisciplinar</h3><p>Participação integrada de Direito, Serviço Social, Psicologia, Jornalismo e Design de Interiores.</p></article>
+   <article class="card"><div class="card-icon">🤝</div><h3>Atuação interdisciplinar</h3><p>Participação integrada de Direito, Serviço Social, Psicologia, Jornalismo, Design de Interiores e Administração.</p></article>
    <article class="card"><div class="card-icon">📍</div><h3>Ações itinerantes</h3><p>Atendimentos em comunidades urbanas e rurais, em articulação com prefeituras, CRAS, associações e parceiros institucionais.</p></article>
   </div>
  </div>
@@ -82,13 +82,36 @@
    <div class="map-frame" id="sc-map" aria-label="Mapa interativo de Santa Catarina">
     <div class="map-toolbar"><button type="button" id="zoom-out" aria-label="Diminuir mapa">−</button><button type="button" id="zoom-in" aria-label="Aumentar mapa">+</button><button type="button" id="zoom-reset">Centralizar</button></div>
     <div class="map-canvas" id="map-canvas">
-      <img class="sc-base-map" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Brazil%20Santa%20Catarina%20location%20map.svg" alt="Mapa de Santa Catarina com divisão municipal">
-      <div class="map-watermark">SANTA CATARINA<br><span>PRO BONO UNIPLAC</span></div>
-      <div class="map-road road-a"></div><div class="map-road road-b"></div><div class="map-road road-c"></div>
-      <div class="map-fallback">Mapa de Santa Catarina</div>
+      <svg class="sc-illustrated-map" viewBox="0 0 800 600" role="img" aria-label="Mapa ilustrativo de Santa Catarina com pontos de atendimento do Projeto Pro Bono UNIPLAC">
+        <defs>
+          <linearGradient id="water" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9effa"/><stop offset="1" stop-color="#b9dfef"/></linearGradient>
+          <linearGradient id="land" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffdf5"/><stop offset="1" stop-color="#f1e6c9"/></linearGradient>
+          <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-opacity=".16"/></filter>
+          <clipPath id="scClip"><path d="M112 104 C166 83 239 78 311 92 C382 105 447 101 520 93 C588 85 646 96 684 125 L666 159 C650 188 660 220 645 248 C628 278 636 312 616 342 C594 374 580 414 550 444 C525 469 494 482 463 486 C431 490 401 510 369 504 C339 498 321 477 291 472 C258 467 225 452 203 429 C181 406 160 380 143 348 C128 321 109 294 102 264 C95 235 102 205 93 180 C86 153 88 126 112 104 Z"/></clipPath>
+        </defs>
+        <rect width="800" height="600" fill="url(#water)"/>
+        <g opacity=".28" stroke="#fff" stroke-width="3" fill="none">
+          <path d="M0 150 C150 105 280 195 420 135 S680 110 800 160"/>
+          <path d="M0 270 C160 220 300 330 455 255 S690 235 800 285"/>
+          <path d="M0 420 C130 370 280 480 430 405 S690 385 800 435"/>
+        </g>
+        <path d="M112 104 C166 83 239 78 311 92 C382 105 447 101 520 93 C588 85 646 96 684 125 L666 159 C650 188 660 220 645 248 C628 278 636 312 616 342 C594 374 580 414 550 444 C525 469 494 482 463 486 C431 490 401 510 369 504 C339 498 321 477 291 472 C258 467 225 452 203 429 C181 406 160 380 143 348 C128 321 109 294 102 264 C95 235 102 205 93 180 C86 153 88 126 112 104 Z" fill="url(#land)" stroke="#b8a36d" stroke-width="6" filter="url(#shadow)"/>
+        <g clip-path="url(#scClip)" opacity=".42" fill="none" stroke="#c6b889" stroke-width="2">
+          <path d="M120 160 L660 180"/><path d="M100 220 L650 245"/><path d="M105 285 L625 310"/><path d="M130 350 L595 370"/><path d="M165 410 L555 430"/>
+          <path d="M180 90 L190 470"/><path d="M260 85 L275 485"/><path d="M345 90 L350 500"/><path d="M430 92 L420 495"/><path d="M515 90 L500 470"/><path d="M590 98 L575 440"/>
+        </g>
+        <g clip-path="url(#scClip)" fill="none" stroke="#fff" stroke-width="6" opacity=".72">
+          <path d="M120 210 C220 170 300 245 390 205 S560 170 660 220"/>
+          <path d="M105 330 C205 285 300 365 405 320 S550 295 620 350"/>
+          <path d="M180 420 C260 365 345 455 430 400 S520 380 575 420"/>
+        </g>
+        <text x="400" y="155" text-anchor="middle" class="map-title-svg">SANTA CATARINA</text>
+        <text x="400" y="180" text-anchor="middle" class="map-subtitle-svg">AÇÕES PRO BONO UNIPLAC</text>
+        <g class="compass"><circle cx="730" cy="85" r="30" fill="#fff" opacity=".9"/><path d="M730 62 L738 92 L730 108 L722 92 Z" fill="#102c50"/><text x="730" y="52" text-anchor="middle">N</text></g>
+      </svg>
       <div id="map-markers"></div>
     </div>
-    <div class="map-credit">Mapa-base: Santa Catarina • visualização cartográfica estilizada. Clique em um ponto para abrir a localização no Google Maps.</div>
+    <div class="map-credit">Mapa ilustrativo de Santa Catarina • pontos posicionados por município. Clique em um ponto para abrir a localização no Google Maps.</div>
    </div>
    <aside class="locations" id="location-list"></aside>
   </div>
@@ -108,7 +131,7 @@
   <div class="section-head"><span class="eyebrow">EQUIPE E PARTICIPAÇÃO</span><h2>Trabalho integrado</h2><p>O projeto reúne professores, bolsistas, acadêmicos, profissionais e parceiros institucionais.</p></div>
   <div class="team-grid">
    <div><h3>Coordenação geral</h3><p>Professora Mestre Aline Elise Debiazi Vargas Longo</p><p>Professora Mestre Camila Stefanes Oselame</p><p>Professor Mestre Gerson Palma Arruda</p></div>
-   <div><h3>Áreas participantes</h3><p>Direito • Serviço Social • Psicologia • Jornalismo • Design de Interiores</p><p>Também participam professores, advogados bolsistas, egressos, acadêmicos, técnicos administrativos e parceiros institucionais.</p></div>
+   <div><h3>Áreas participantes</h3><p>Direito • Serviço Social • Psicologia • Jornalismo • Design de Interiores • Administração</p><p>Também participam professores, advogados bolsistas, egressos, acadêmicos, técnicos administrativos e parceiros institucionais.</p></div>
   </div>
  </div>
 </section>
@@ -133,8 +156,8 @@
 <script>
 const fallbackActions=[
  {date:'08/08/2026',city:'Lages',place:'Bairro Caça e Tiro',status:'done',label:'Realizado',lat:-27.815,lon:-50.325,googleMapsQuery:'Bairro Caça e Tiro, Lages, SC'},
- {date:'22/08/2026',city:'Lages',place:'Bairro Centenário',status:'next',label:'Previsto',lat:-27.814,lon:-50.307,googleMapsQuery:'Bairro Centenário, Lages, SC'},
- {date:'12/09/2026',city:'Urubici',place:'CRAS',status:'next',label:'Previsto',lat:-28.015,lon:-49.592,googleMapsQuery:'CRAS, Urubici, SC'},
+ {date:'22/08/2026',city:'Lages',place:'Bairro Centenário',status:'done',label:'Realizado',lat:-27.814,lon:-50.307,googleMapsQuery:'Bairro Centenário, Lages, SC'},
+ {date:'12/09/2026',city:'Urubici',place:'CRAS',status:'done',label:'Realizado',lat:-28.015,lon:-49.592,googleMapsQuery:'CRAS, Urubici, SC'},
  {date:'26/09/2026',city:'Lages',place:'Salto Caveiras',status:'next',label:'Previsto',lat:-27.725,lon:-50.472,googleMapsQuery:'Salto Caveiras, Lages, SC'},
  {date:'10/10/2026',city:'São Joaquim',place:'A definir',status:'next',label:'Previsto',lat:-28.293,lon:-49.932,googleMapsQuery:'São Joaquim, SC'},
  {date:'24/10/2026',city:'Palmeira',place:'A definir',status:'next',label:'Previsto',lat:-27.583,lon:-50.158,googleMapsQuery:'Palmeira, SC'},
